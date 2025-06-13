@@ -1,161 +1,211 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cidade vs Campo</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Arial', sans-serif;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cidade e Campo - Conheça os Dois Mundos</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+    }
 
-        body {
-            overflow-x: hidden;
-        }
+    header {
+      background: linear-gradient(to right, #0077cc, #2e7d32);
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
 
-        .section {
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            color: white;
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            transition: all 0.5s ease;
-        }
+    nav {
+      background-color: #fff;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 15px 0;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
 
-        .city {
-            background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e');
-        }
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
 
-        .country {
-            background-image: url('https://images.unsplash.com/photo-1500382017464-6b3f747a8307');
-        }
+    nav a:hover {
+      color: #0077cc;
+    }
 
-        .overlay {
-            background: rgba(0, 0, 0, 0.5);
-            padding: 20px;
-            border-radius: 10px;
-        }
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 40px 20px;
+      background-color: white;
+    }
 
-        h1 {
-            font-size: 3.5em;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-        }
+    section {
+      margin-bottom: 60px;
+    }
 
-        p {
-            font-size: 1.2em;
-            max-width: 600px;
-            line-height: 1.6;
-        }
+    h2 {
+      color: #0077cc;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+    }
 
-        .btn {
-            margin-top: 20px;
-            padding: 10px 20px;
-            background: #ff6f61;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            transition: background 0.3s;
-        }
+    h3 {
+      color: #2e7d32;
+    }
 
-        .btn:hover {
-            background: #e65b50;
-        }
+    img {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin: 20px 0;
+    }
 
-        .gallery {
-            padding: 50px;
-            background: #f4f4f4;
-            text-align: center;
-        }
+    ul {
+      padding-left: 20px;
+    }
 
-        .gallery h2 {
-            font-size: 2.5em;
-            margin-bottom: 30px;
-            color: #333;
-        }
-
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
-
-        .gallery-grid img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 10px;
-            transition: transform 0.3s;
-        }
-
-        .gallery-grid img:hover {
-            transform: scale(1.05);
-        }
-
-        footer {
-            background: #333;
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
-
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2.5em;
-            }
-
-            p {
-                font-size: 1em;
-            }
-
-            .gallery-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+    footer {
+      background-color: #222;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
 </head>
 <body>
-    <!-- Seção Cidade -->
-    <section class="section city">
-        <div class="overlay">
-            <h1>A Vibração da Cidade</h1>
-            <p>A cidade pulsa com energia, luzes brilhantes e oportunidades infinitas. É o lugar onde os sonhos encontram arranha-céus e a vida nunca para.</p>
-            <a href="#gallery" class="btn">Explore Mais</a>
-        </div>
+
+  <!-- Cabeçalho -->
+  <header>
+    <h1>Cidade e Campo</h1>
+    <p>Descubra as diferenças e semelhanças entre dois dos ambientes mais importantes da vida humana.</p>
+  </header>
+
+  <!-- Navegação -->
+  <nav>
+    <a href="#introducao">📌 Introdução</a>
+    <a href="#cidade">🌆 Cidade</a>
+    <a href="#campo">🌾 Campo</a>
+    <a href="#diferencas">🔍 Diferenças</a>
+    <a href="#impactos">🌍 Impactos</a>
+    <a href="#conclusao">✅ Conclusão</a>
+  </nav>
+
+  <!-- Conteúdo -->
+  <div class="container">
+
+    <!-- Introdução -->
+    <section id="introducao">
+      <h2>📌 Introdução</h2>
+      <p>O mundo moderno é dividido entre áreas urbanas e rurais. A cidade e o campo são realidades que coexistem e se complementam no desenvolvimento humano, econômico e ambiental. Enquanto a cidade é o centro das atividades comerciais e tecnológicas, o campo mantém a base da produção de alimentos e recursos naturais.</p>
+      <img src="https://source.unsplash.com/800x400/?city,farm" alt="Imagem de cidade e campo">
     </section>
 
-    <!-- Seção Campo -->
-    <section class="section country">
-        <div class="overlay">
-            <h1>A Paz do Campo</h1>
-            <p>O campo oferece tranquilidade, ar puro e uma conexão profunda com a natureza. Aqui, o tempo desacelera e a simplicidade reina.</p>
-            <a href="#gallery" class="btn">Descubra Mais</a>
-        </div>
+    <!-- Cidade -->
+    <section id="cidade">
+      <h2>🌆 Cidade</h2>
+      <p>As cidades são centros urbanos densamente povoados, onde encontramos alta concentração de pessoas, prédios, indústrias, comércio e serviços. São espaços dinâmicos e diversificados, que reúnem oportunidades profissionais, culturais e sociais.</p>
+      <h3>Vantagens:</h3>
+      <ul>
+        <li>Acesso a serviços de saúde e educação;</li>
+        <li>Mobilidade urbana e transporte público;</li>
+        <li>Empregos e oportunidades de carreira;</li>
+        <li>Infraestrutura completa (água, energia, internet);</li>
+        <li>Opções de lazer, como cinemas, teatros e parques.</li>
+      </ul>
+      <img src="https://source.unsplash.com/800x400/?urban,night" alt="Cidade à noite">
     </section>
 
-    <!-- Galeria de Imagens -->
-    <section class="gallery" id="gallery">
-        <h2>Imagens que Contam Histórias</h2>
-        <div class="gallery-grid">
-            <img src="https://images.unsplash.com/photo-1519501025264-65a49a4d72ac" alt="Cidade à noite">
-            <img src="https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0" alt="Campo verde">
-            <img src="https://images.unsplash.com/photo-1542831371-29b0f74f9713" alt="Rua urbana">
-            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Pôr do sol no campo">
-        </div>
+    <!-- Campo -->
+    <section id="campo">
+      <h2>🌾 Campo</h2>
+      <p>O campo é o ambiente rural onde predominam a natureza, o silêncio e a simplicidade. É nele que ocorre a produção de alimentos, a criação de animais e a preservação de ecossistemas. O modo de vida no campo é mais tranquilo e próximo da família.</p>
+      <h3>Vantagens:</h3>
+      <ul>
+        <li>Qualidade de vida e baixo estresse;</li>
+        <li>Ar puro e contato direto com a natureza;</li>
+        <li>Alimentação saudável e orgânica;</li>
+        <li>Menor custo de vida;</li>
+        <li>Paisagens belas e tranquilas.</li>
+      </ul>
+      <img src="https://source.unsplash.com/800x400/?countryside,sunset" alt="Campo ao pôr do sol">
     </section>
 
-    <!-- Rodapé -->
-    <footer>
-        <p>&copy; 2025 Cidade vs Campo | Criado com criatividade</p>
-    </footer>
+    <!-- Diferenças -->
+    <section id="diferencas">
+      <h2>🔍 Diferenças entre Cidade e Campo</h2>
+      <table border="1" width="100%" cellpadding="10" style="border-collapse: collapse;">
+        <tr style="background-color: #f2f2f2;"> 
+          <th>Aspecto</th>
+          <th>Cidade</th>
+          <th>Campo</th>
+        </tr>
+        <tr>
+          <td>Ritmo de vida</td>
+          <td>Acelerado e corrido</td>
+          <td>Calmo e relaxado</td>
+        </tr>
+        <tr>
+          <td>População</td>
+          <td>Densa e variada</td>
+          <td>Menor e mais homogênea</td>
+        </tr>
+        <tr>
+          <td>Economia</td>
+          <td>Serviços, indústria e comércio</td>
+          <td>Agricultura, pecuária e extrativismo</td>
+        </tr>
+        <tr>
+          <td>Natureza</td>
+          <td>Áreas verdes limitadas</td>
+          <td>Natureza abundante</td>
+        </tr>
+        <tr>
+          <td>Infraestrutura</td>
+          <td>Bem desenvolvida</td>
+          <td>Às vezes precária ou insuficiente</td>
+        </tr>
+      </table>
+    </section>
+
+    <!-- Impactos -->
+    <section id="impactos">
+      <h2>🌍 Impactos Ambientais e Sociais</h2>
+      <p>Tanto a cidade quanto o campo têm impactos positivos e negativos no meio ambiente e na sociedade:</p>
+      <ul>
+        <li><strong>Cidade:</strong> poluição do ar e sonora, desmatamento, lixo, mas também inovação e tecnologia verde.</li>
+        <li><strong>Campo:</strong> pode sofrer com uso inadequado do solo, agrotóxicos e desmatamento, mas também é essencial para a sustentabilidade e conservação.</li>
+      </ul>
+      <p>É fundamental promover o equilíbrio entre desenvolvimento e preservação ambiental nas duas áreas.</p>
+      <img src="https://source.unsplash.com/800x400/?nature,pollution" alt="Impactos ambientais">
+    </section>
+
+    <!-- Conclusão -->
+    <section id="conclusao">
+      <h2>✅ Conclusão</h2>
+      <p>A escolha entre viver na cidade ou no campo depende muito do estilo de vida e das prioridades de cada pessoa. Ambos os ambientes são fundamentais para o equilíbrio social, econômico e ambiental do planeta. Preservar e valorizar os dois é garantir um futuro mais justo e sustentável para todos.</p>
+    </section>
+
+  </div>
+
+  <!-- Rodapé -->
+  <footer>
+    <p>&copy; 2025 Cidade e Campo | Todos os direitos reservados</p>
+  </footer>
+
 </body>
 </html>

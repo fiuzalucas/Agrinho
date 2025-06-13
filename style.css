@@ -28,7 +28,7 @@ body {
 
 /* Seção da cidade */
 .city {
-    background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e');
+    background-image: url('https://images.unsplash.com/photo-1519501025264-65a49a4d72ac');
 }
 
 /* Seção do campo */
@@ -38,52 +38,81 @@ body {
 
 /* Overlay para melhor legibilidade do texto */
 .overlay {
-    background: rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 800px;
 }
 
 /* Estilo dos títulos principais */
 h1 {
-    font-size: 3.5em;
+    font-size: 3.8em;
     margin-bottom: 20px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    animation: fadeIn 1s ease-in;
+}
+
+/* Estilo dos subtítulos */
+h2 {
+    font-size: 2em;
+    margin-bottom: 15px;
 }
 
 /* Estilo dos parágrafos */
 p {
     font-size: 1.2em;
-    max-width: 600px;
     line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Estilo das listas */
+ul {
+    list-style: none;
+    font-size: 1.1em;
+    text-align: left;
+    max-width: 600px;
+    margin: 0 auto 20px;
+}
+
+ul li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 20px;
+}
+
+ul li:before {
+    content: "🌟";
+    position: absolute;
+    left: 0;
 }
 
 /* Estilo do botão */
 .btn {
     margin-top: 20px;
-    padding: 10px 20px;
+    padding: 12px 25px;
     background: #ff6f61;
     color: white;
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
-    transition: background 0.3s;
+    transition: background 0.3s, transform 0.3s;
 }
 
-/* Hover do botão */
 .btn:hover {
     background: #e65b50;
+    transform: scale(1.05);
 }
 
 /* Estilo da seção de galeria */
 .gallery {
-    padding: 50px;
+    padding: 60px 20px;
     background: #f4f4f4;
     text-align: center;
 }
 
 /* Título da galeria */
 .gallery h2 {
-    font-size: 2.5em;
+    font-size: 2.8em;
     margin-bottom: 30px;
     color: #333;
 }
@@ -93,20 +122,55 @@ p {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 /* Estilo das imagens da galeria */
 .gallery-grid img {
     width: 100%;
-    height: 200px;
+    height: 220px;
     object-fit: cover;
     border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilo da seção de curiosidades */
+.facts {
+    padding: 60px 20px;
+    background: #fff;
+    text-align: center;
+}
+
+.facts h2 {
+    font-size: 2.8em;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.facts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.fact-card {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
 }
 
-/* Hover nas imagens da galeria */
-.gallery-grid img:hover {
-    transform: scale(1.05);
+.fact-card:hover {
+    transform: translateY(-5px);
 }
 
 /* Estilo do rodapé */
@@ -115,19 +179,38 @@ footer {
     color: white;
     text-align: center;
     padding: 20px;
+    font-size: 1em;
+}
+
+/* Animação de fade-in */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 /* Media query para responsividade em telas menores */
 @media (max-width: 768px) {
     h1 {
-        font-size: 2.5em;
+        font-size: 2.8em;
+    }
+
+    h2 {
+        font-size: 1.8em;
     }
 
     p {
         font-size: 1em;
     }
 
-    .gallery-grid {
+    .overlay {
+        padding: 20px;
+    }
+
+    .gallery-grid, .facts-grid {
         grid-template-columns: 1fr;
+    }
+
+    .gallery-grid img {
+        height: 180px;
     }
 }
