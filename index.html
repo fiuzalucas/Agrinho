@@ -1,71 +1,161 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Cidade & Campo</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cidade vs Campo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            overflow-x: hidden;
+        }
+
+        .section {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            transition: all 0.5s ease;
+        }
+
+        .city {
+            background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e');
+        }
+
+        .country {
+            background-image: url('https://images.unsplash.com/photo-1500382017464-6b3f747a8307');
+        }
+
+        .overlay {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        h1 {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        p {
+            font-size: 1.2em;
+            max-width: 600px;
+            line-height: 1.6;
+        }
+
+        .btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: #ff6f61;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: #e65b50;
+        }
+
+        .gallery {
+            padding: 50px;
+            background: #f4f4f4;
+            text-align: center;
+        }
+
+        .gallery h2 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery-grid img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+
+        .gallery-grid img:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5em;
+            }
+
+            p {
+                font-size: 1em;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
+    <!-- Seção Cidade -->
+    <section class="section city">
+        <div class="overlay">
+            <h1>A Vibração da Cidade</h1>
+            <p>A cidade pulsa com energia, luzes brilhantes e oportunidades infinitas. É o lugar onde os sonhos encontram arranha-céus e a vida nunca para.</p>
+            <a href="#gallery" class="btn">Explore Mais</a>
+        </div>
+    </section>
 
-  <!-- Cabeçalho -->
-  <header class="hero">
-    <h1>Bem-vindo à Jornada entre Cidade e Campo</h1>
-    <p>Explore dois mundos que encantam de formas diferentes.</p>
-  </header>
+    <!-- Seção Campo -->
+    <section class="section country">
+        <div class="overlay">
+            <h1>A Paz do Campo</h1>
+            <p>O campo oferece tranquilidade, ar puro e uma conexão profunda com a natureza. Aqui, o tempo desacelera e a simplicidade reina.</p>
+            <a href="#gallery" class="btn">Descubra Mais</a>
+        </div>
+    </section>
 
-  <!-- Navegação -->
-  <nav class="navbar">
-    <a href="#cidade">🌆 Cidade</a>
-    <a href="#campo">🌾 Campo</a>
-    <a href="#diferencas">🔍 Diferenças</a>
-  </nav>
+    <!-- Galeria de Imagens -->
+    <section class="gallery" id="gallery">
+        <h2>Imagens que Contam Histórias</h2>
+        <div class="gallery-grid">
+            <img src="https://images.unsplash.com/photo-1519501025264-65a49a4d72ac" alt="Cidade à noite">
+            <img src="https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0" alt="Campo verde">
+            <img src="https://images.unsplash.com/photo-1542831371-29b0f74f9713" alt="Rua urbana">
+            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Pôr do sol no campo">
+        </div>
+    </section>
 
-  <!-- Seção Cidade -->
-  <section id="cidade" class="parallax">
-    <div class="content left">
-      <h2>Vida na Cidade</h2>
-      <p>A vida urbana pulsa com energia. É onde a tecnologia, a cultura e as oportunidades se encontram. A cidade é sinônimo de dinamismo, inovação e conexão humana em alta velocidade.</p>
-    </div>
-  </section>
-
-  <!-- Seção Campo -->
-  <section id="campo" class="parallax reverse">
-    <div class="content right">
-      <h2>Vida no Campo</h2>
-      <p>O campo respira tranquilidade e oferece uma conexão profunda com a natureza. Ideal para quem busca paz, simplicidade e um estilo de vida mais saudável e próximo das origens.</p>
-    </div>
-  </section>
-
-  <!-- Seção Diferenças -->
-  <section id="diferencas" class="info-section">
-    <h2>Diferenças entre Cidade e Campo</h2>
-    <div class="comparison">
-      <div class="card">
-        <h3>🌆 Cidade</h3>
-        <ul>
-          <li>Ritmo acelerado</li>
-          <li>Muitas oportunidades</li>
-          <li>Infraestrutura completa</li>
-          <li>Pouca natureza</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3>🌾 Campo</h3>
-        <ul>
-          <li>Ritmo calmo</li>
-          <li>Proximidade com a terra</li>
-          <li>Natureza abundante</li>
-          <li>Infraestrutura básica</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- Rodapé -->
-  <footer>
-    <p>&copy; 2025 Cidade & Campo | Todos os direitos reservados</p>
-  </footer>
-
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2025 Cidade vs Campo | Criado com criatividade</p>
+    </footer>
 </body>
 </html>
