@@ -1,216 +1,438 @@
-/* Reset básico para remover margens e padding padrão */
+/* Importação de fontes do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap');
+
+:root {
+    --primary-color: #4CAF50; /* Verde campo */
+    --secondary-color: #2196F3; /* Azul cidade */
+    --text-color: #333;
+    --light-bg: #f8f8f8;
+    --dark-bg: #2c3e50; /* Cinza escuro para o rodapé */
+    --accent-color: #FFC107; /* Amarelo para detalhes */
+}
+
+/* Reset Básico */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
 }
 
-/* Configuração geral do body */
 body {
-    overflow-x: hidden;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--light-bg);
+    scroll-behavior: smooth; /* Suaviza o scroll para os links de navegação */
 }
 
-/* Estilo das seções principais (cidade e campo) */
-.section {
-    height: 100vh;
+/* Hero Section */
+.hero-section {
+    position: relative;
+    height: 100vh; /* Ocupa a altura total da viewport */
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     color: white;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    transition: all 0.5s ease;
+    background: url('images/hero-bg.jpg') no-repeat center center/cover; /* Adicione uma imagem de fundo criativa aqui */
+    overflow: hidden;
 }
 
-/* Seção da cidade */
-.city {
-    background-image: url('https://images.unsplash.com/photo-1519501025264-65a49a4d72ac');
-}
-
-/* Seção do campo */
-.country {
-    background-image: url('https://images.unsplash.com/photo-1500382017464-6b3f747a8307');
-}
-
-/* Overlay para melhor legibilidade do texto */
-.overlay {
-    background: rgba(0, 0, 0, 0.6);
-    padding: 30px;
-    border-radius: 15px;
-    max-width: 800px;
-}
-
-/* Estilo dos títulos principais */
-h1 {
-    font-size: 3.8em;
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    animation: fadeIn 1s ease-in;
-}
-
-/* Estilo dos subtítulos */
-h2 {
-    font-size: 2em;
-    margin-bottom: 15px;
-}
-
-/* Estilo dos parágrafos */
-p {
-    font-size: 1.2em;
-    line-height: 1.6;
-    margin-bottom: 15px;
-}
-
-/* Estilo das listas */
-ul {
-    list-style: none;
-    font-size: 1.1em;
-    text-align: left;
-    max-width: 600px;
-    margin: 0 auto 20px;
-}
-
-ul li {
-    margin-bottom: 10px;
-    position: relative;
-    padding-left: 20px;
-}
-
-ul li:before {
-    content: "🌟";
+.hero-overlay {
     position: absolute;
+    top: 0;
     left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.6) 100%);
+    z-index: 1;
 }
 
-/* Estilo do botão */
-.btn {
-    margin-top: 20px;
-    padding: 12px 25px;
-    background: #ff6f61;
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: 20px;
+}
+
+.hero-content h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 4em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+    animation: fadeInDown 1s ease-out;
+}
+
+.hero-content p {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+    animation: fadeInUp 1s ease-out 0.3s forwards;
+    opacity: 0;
+}
+
+.cta-buttons .button {
+    display: inline-block;
+    padding: 15px 30px;
+    margin: 0 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    animation: fadeIn 1s ease-out 0.6s forwards;
+    opacity: 0;
+}
+
+.primary-button {
+    background-color: var(--primary-color);
+    color: white;
+    border: 2px solid var(--primary-color);
+}
+
+.primary-button:hover {
+    background-color: darken(var(--primary-color), 10%);
+    transform: translateY(-3px);
+}
+
+.secondary-button {
+    background-color: var(--secondary-color);
+    color: white;
+    border: 2px solid var(--secondary-color);
+}
+
+.secondary-button:hover {
+    background-color: darken(var(--secondary-color), 10%);
+    transform: translateY(-3px);
+}
+
+/* Navegação Principal */
+.main-nav {
+    background-color: var(--dark-bg);
+    padding: 15px 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.main-nav ul li {
+    margin: 0 20px;
+}
+
+.main-nav ul li a {
     color: white;
     text-decoration: none;
-    border-radius: 5px;
     font-weight: bold;
-    transition: background 0.3s, transform 0.3s;
+    font-size: 1.1em;
+    padding: 5px 0;
+    position: relative;
+    transition: color 0.3s ease;
 }
 
-.btn:hover {
-    background: #e65b50;
-    transform: scale(1.05);
+.main-nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: var(--accent-color);
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
 }
 
-/* Estilo da seção de galeria */
-.gallery {
-    padding: 60px 20px;
-    background: #f4f4f4;
+.main-nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* Seções de Conteúdo */
+.content-section {
+    padding: 80px 0;
     text-align: center;
+    background-color: white;
+    margin-bottom: 20px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.05);
 }
 
-/* Título da galeria */
-.gallery h2 {
-    font-size: 2.8em;
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.content-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3em;
     margin-bottom: 30px;
-    color: #333;
+    color: var(--primary-color);
 }
 
-/* Grid da galeria */
-.gallery-grid {
+#cidade-section h2 {
+    color: var(--secondary-color);
+}
+
+.text-content {
+    flex: 1;
+    text-align: left;
+}
+
+.text-content p {
+    margin-bottom: 15px;
+    font-size: 1.1em;
+    line-height: 1.8;
+}
+
+.image-grid {
+    flex: 1;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
+    gap: 15px;
 }
 
-/* Estilo das imagens da galeria */
-.gallery-grid img {
+.image-grid img {
     width: 100%;
-    height: 220px;
+    height: 250px;
     object-fit: cover;
     border-radius: 10px;
-    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
 }
 
-.gallery-grid img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+.image-grid img:hover {
+    transform: scale(1.03);
 }
 
-/* Estilo da seção de curiosidades */
-.facts {
-    padding: 60px 20px;
-    background: #fff;
+.reverse-layout {
+    flex-direction: row-reverse;
+}
+
+/* Efeito Fade In ao Scroll */
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-section.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Galeria de Imagens (Carrossel) */
+.gallery-section {
+    background-color: var(--light-bg);
+    padding: 80px 0;
     text-align: center;
 }
 
-.facts h2 {
-    font-size: 2.8em;
-    margin-bottom: 30px;
-    color: #333;
+.gallery-section h2 {
+    color: var(--dark-bg);
 }
 
-.facts-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+.image-carousel {
+    display: flex;
+    overflow-x: hidden; /* Esconde o scroll horizontal */
+    scroll-behavior: smooth;
     gap: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
+    padding: 20px 0;
+    justify-content: flex-start; /* Alinha os itens ao início */
 }
 
-.fact-card {
-    background: #f9f9f9;
-    padding: 20px;
+.image-carousel img {
+    min-width: 350px; /* Largura mínima para cada imagem no carrossel */
+    height: 250px;
+    object-fit: cover;
     border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
 }
 
-.fact-card:hover {
+.image-carousel img:hover {
     transform: translateY(-5px);
 }
 
-/* Estilo do rodapé */
+.carousel-nav {
+    margin-top: 30px;
+}
+
+.carousel-nav button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.5em;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 0 10px;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-nav button:hover {
+    background-color: var(--secondary-color);
+}
+
+
+/* Call to Action Section */
+.call-to-action {
+    background-color: var(--accent-color);
+    color: var(--dark-bg);
+    padding: 60px 0;
+    text-align: center;
+    margin-top: 20px;
+    animation: scaleIn 0.8s ease-out;
+}
+
+.call-to-action h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5em;
+    margin-bottom: 15px;
+}
+
+.call-to-action p {
+    font-size: 1.2em;
+}
+
+/* Rodapé */
 footer {
-    background: #333;
+    background-color: var(--dark-bg);
     color: white;
     text-align: center;
-    padding: 20px;
-    font-size: 1em;
+    padding: 25px 0;
+    font-size: 0.9em;
 }
 
-/* Animação de fade-in */
+/* Animações Keyframes */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
-/* Media query para responsividade em telas menores */
+@keyframes scaleIn {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 992px) {
+    .hero-content h1 {
+        font-size: 3.5em;
+    }
+    .hero-content p {
+        font-size: 1.3em;
+    }
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .reverse-layout {
+        flex-direction: column;
+    }
+    .image-grid {
+        margin-top: 30px;
+    }
+    .main-nav ul {
+        flex-wrap: wrap;
+    }
+    .main-nav ul li {
+        margin: 10px;
+    }
+}
+
 @media (max-width: 768px) {
-    h1 {
+    .hero-content h1 {
         font-size: 2.8em;
     }
-
-    h2 {
-        font-size: 1.8em;
+    .hero-content p {
+        font-size: 1.1em;
     }
-
-    p {
+    .cta-buttons .button {
+        padding: 12px 25px;
+        font-size: 0.9em;
+        margin: 5px;
+    }
+    .content-section h2 {
+        font-size: 2.5em;
+    }
+    .text-content p {
         font-size: 1em;
     }
-
-    .overlay {
-        padding: 20px;
+    .image-carousel img {
+        min-width: 280px;
     }
+}
 
-    .gallery-grid, .facts-grid {
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 2em;
+    }
+    .hero-content p {
+        font-size: 0.9em;
+    }
+    .cta-buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .cta-buttons .button {
+        width: 80%;
+        margin-bottom: 10px;
+    }
+    .main-nav ul li {
+        margin: 5px 10px;
+    }
+    .main-nav ul li a {
+        font-size: 0.9em;
+    }
+    .content-section h2 {
+        font-size: 2em;
+    }
+    .image-grid {
         grid-template-columns: 1fr;
     }
-
-    .gallery-grid img {
-        height: 180px;
+    .carousel-nav button {
+        padding: 8px 15px;
+        font-size: 1.2em;
     }
 }

@@ -3,112 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Campo e Cidade: Contrastes e Harmonia</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        header {
-            background-color: #4CAF50;
-            color: white;
-            padding: 1em 0;
-            text-align: center;
-        }
-        nav {
-            background-color: #333;
-            color: white;
-            padding: 0.5em 0;
-            text-align: center;
-        }
-        nav a {
-            color: white;
-            padding: 0.5em 1em;
-            text-decoration: none;
-        }
-        nav a:hover {
-            background-color: #ddd;
-            color: black;
-        }
-        .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
-            padding: 20px 0;
-        }
-        section {
-            background-color: white;
-            margin-bottom: 20px;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        h2 {
-            color: #4CAF50;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        .image-gallery {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            justify-content: center;
-            margin-top: 20px;
-        }
-        .image-gallery img {
-            width: 100%;
-            max-width: 300px;
-            height: auto;
-            border-radius: 8px;
-            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-        }
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 1em 0;
-            position: relative;
-            bottom: 0;
-            width: 100%;
-        }
-    </style>
+    <title>Cidade e Campo: Contrastes e Conexões</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/favicon.png" type="image/png">
 </head>
 <body>
-    <header>
-        <h1>Campo e Cidade: Um Olhar Sobre Dois Mundos</h1>
+    <header class="hero-section">
+        <div class="hero-content">
+            <h1>Cidade e Campo</h1>
+            <p>Do caos vibrante à serenidade natural: uma jornada por dois mundos.</p>
+            <div class="cta-buttons">
+                <a href="#campo-section" class="button primary-button">Explorar o Campo</a>
+                <a href="#cidade-section" class="button secondary-button">Explorar a Cidade</a>
+            </div>
+        </div>
+        <div class="hero-overlay"></div>
     </header>
-    <nav>
-        <a href="#campo">O Campo</a>
-        <a href="#cidade">A Cidade</a>
+
+    <nav class="main-nav">
+        <ul>
+            <li><a href="#" class="nav-link" data-target="hero-section">Início</a></li>
+            <li><a href="#campo-section" class="nav-link" data-target="campo-section">O Campo</a></li>
+            <li><a href="#cidade-section" class="nav-link" data-target="cidade-section">A Cidade</a></li>
+            <li><a href="#galeria-section" class="nav-link" data-target="galeria-section">Galeria</a></li>
+        </ul>
     </nav>
-    <div class="container">
-        <section id="campo">
-            <h2>A Tranquilidade do Campo</h2>
-            <p>O campo, com sua vasta extensão verde e ar puro, oferece um refúgio da agitação urbana. Aqui, o ritmo de vida é mais lento, ditado pelos ciclos da natureza. As atividades diárias muitas vezes giram em torno da agricultura, pecuária e da preservação ambiental.</p>
-            <p>A vida rural proporciona uma conexão mais profunda com a natureza, a oportunidade de cultivar alimentos frescos e desfrutar de paisagens deslumbrantes. O silêncio é quebrado apenas pelos sons dos pássaros, do vento nas árvores e, ocasionalmente, de algum animal.</p>
-            <div class="image-gallery">
-                <img src="https://via.placeholder.com/300x200?text=Imagem+Campo+1" alt="Paisagem rural com montanhas e árvores">
-                <img src="https://via.placeholder.com/300x200?text=Imagem+Campo+2" alt="Fazenda com animais">
-                <img src="https://via.placeholder.com/300x200?text=Imagem+Campo+3" alt="Pôr do sol no campo">
+
+    <main>
+        <section id="campo-section" class="content-section fade-in-section">
+            <div class="container">
+                <div class="text-content">
+                    <h2>A Calma do Campo</h2>
+                    <p>Onde o tempo parece desacelerar, o campo oferece um santuário de paz e simplicidade. O ar puro, o canto dos pássaros e as vastas paisagens verdes convidam à contemplação e ao reencontro com a natureza.</p>
+                    <p>Aqui, a vida segue o ritmo das estações, e cada amanhecer traz consigo a promessa de tranquilidade e conexão com a terra. Descubra a beleza dos campos cultivados, a pureza dos rios e a riqueza da fauna e flora.</p>
+                </div>
+                <div class="image-grid">
+                    <img src="images/campo1.jpg" alt="Campo verde com montanhas ao fundo">
+                    <img src="images/campo2.jpg" alt="Pôr do sol em uma fazenda com árvores e animais">
+                </div>
             </div>
         </section>
 
-        <section id="cidade">
-            <h2>A Dinâmica da Cidade</h2>
-            <p>Em contraste, a cidade é um centro de intensa atividade, com arranha-céus, ruas movimentadas e uma infinidade de oportunidades. A vida urbana é caracterizada pela sua diversidade cultural, acesso a serviços, entretenimento e uma vasta gama de profissões.</p>
-            <p>As cidades são polos de inovação e desenvolvimento, oferecendo uma vida social vibrante, com teatros, museus, restaurantes e uma rede de transporte complexa. Apesar do ritmo acelerado, a cidade proporciona conveniência e acesso a quase tudo que se possa desejar.</p>
-            <div class="image-gallery">
-                <img src="https://via.placeholder.com/300x200?text=Imagem+Cidade+1" alt="Arranha-céus em uma grande cidade">
-                <img src="https://via.placeholder.com/300x200?text=Imagem+Cidade+2" alt="Rua movimentada da cidade à noite">
-                <img src="https://via.placeholder.com/300x200?text=Imagem+Cidade+3" alt="Parque urbano com pessoas">
+        <section id="cidade-section" class="content-section fade-in-section">
+            <div class="container reverse-layout">
+                <div class="image-grid">
+                    <img src="images/cidade1.jpg" alt="Arranca-céus modernos e movimentados em uma cidade grande">
+                    <img src="images/cidade2.jpg" alt="Ruas da cidade iluminadas à noite com carros e pessoas">
+                </div>
+                <div class="text-content">
+                    <h2>A Vibração da Cidade</h2>
+                    <p>Um epicentro de inovação, cultura e oportunidades, a cidade pulsa com uma energia contagiante. Suas ruas contam histórias, e seus arranha-céus tocam o céu, refletindo a ambição e a diversidade humana.</p>
+                    <p>Explore a vida noturna, a gastronomia diversificada, os museus, teatros e a infinidade de eventos que tornam a experiência urbana inesquecível. A cidade é um caldeirão de culturas, onde o novo e o antigo se encontram.</p>
+                </div>
             </div>
         </section>
-    </div>
+
+        <section id="galeria-section" class="gallery-section fade-in-section">
+            <div class="container">
+                <h2>Galeria de Imagens</h2>
+                <div class="image-carousel">
+                    </div>
+                <div class="carousel-nav">
+                    <button id="prevBtn">&larr;</button>
+                    <button id="nextBtn">&rarr;</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="call-to-action">
+            <div class="container">
+                <h2>Qual mundo te chama mais?</h2>
+                <p>Ambos têm sua magia. Explore, sinta e descubra a beleza em cada detalhe.</p>
+            </div>
+        </section>
+    </main>
+
     <footer>
-        <p>&copy; 2025 Campo e Cidade. Todos os direitos reservados.</p>
+        <p>&copy; 2025 Campo e Cidade. Criado com paixão e contraste.</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
