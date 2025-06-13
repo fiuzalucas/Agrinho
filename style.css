@@ -89,7 +89,7 @@ body {
 }
 
 .primary-button:hover {
-    background-color: darken(var(--primary-color), 10%);
+    background-color: #388E3C; /* tom mais escuro */
     transform: translateY(-3px);
 }
 
@@ -100,7 +100,7 @@ body {
 }
 
 .secondary-button:hover {
-    background-color: darken(var(--secondary-color), 10%);
+    background-color: #1976D2; /* tom mais escuro */
     transform: translateY(-3px);
 }
 
@@ -280,7 +280,6 @@ body {
 .carousel-nav button:hover {
     background-color: var(--secondary-color);
 }
-
 
 /* Call to Action Section */
 .call-to-action {
