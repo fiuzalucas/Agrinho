@@ -1,112 +1,70 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cidade e Campo</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f5f5f5;
-    }
-
-    header {
-      background-color: #2d6b3c;
-      color: white;
-      padding: 20px 0;
-      text-align: center;
-    }
-
-    nav {
-      background-color: #4caf50;
-      padding: 10px;
-      text-align: center;
-    }
-
-    nav a {
-      color: white;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    .container {
-      max-width: 1000px;
-      margin: 20px auto;
-      padding: 20px;
-      background-color: white;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-
-    .section {
-      margin-bottom: 40px;
-    }
-
-    .section img {
-      width: 100%;
-      max-height: 400px;
-      object-fit: cover;
-      border-radius: 8px;
-    }
-
-    .section h2 {
-      color: #2d6b3c;
-      margin-top: 20px;
-    }
-
-    footer {
-      background-color: #2d6b3c;
-      color: white;
-      text-align: center;
-      padding: 15px 0;
-      margin-top: 40px;
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cidade & Campo</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <header>
-    <h1>Cidade e Campo</h1>
-    <p>Do agito urbano ao sossego rural</p>
+  <!-- Cabeçalho -->
+  <header class="hero">
+    <h1>Bem-vindo à Jornada entre Cidade e Campo</h1>
+    <p>Explore dois mundos que encantam de formas diferentes.</p>
   </header>
 
-  <nav>
-    <a href="#cidade">Cidade</a>
-    <a href="#campo">Campo</a>
-    <a href="#diferencas">Diferenças</a>
+  <!-- Navegação -->
+  <nav class="navbar">
+    <a href="#cidade">🌆 Cidade</a>
+    <a href="#campo">🌾 Campo</a>
+    <a href="#diferencas">🔍 Diferenças</a>
   </nav>
 
-  <div class="container">
-    
-    <div class="section" id="cidade">
-      <img src="https://source.unsplash.com/800x400/?city,urban" alt="Imagem da cidade">
+  <!-- Seção Cidade -->
+  <section id="cidade" class="parallax">
+    <div class="content left">
       <h2>Vida na Cidade</h2>
-      <p>A vida urbana é marcada pela agitação, oportunidades profissionais, acesso a serviços de saúde, educação e lazer. As cidades são centros econômicos e culturais que atraem pessoas do mundo todo.</p>
+      <p>A vida urbana pulsa com energia. É onde a tecnologia, a cultura e as oportunidades se encontram. A cidade é sinônimo de dinamismo, inovação e conexão humana em alta velocidade.</p>
     </div>
+  </section>
 
-    <div class="section" id="campo">
-      <img src="https://source.unsplash.com/800x400/?farm,countryside" alt="Imagem do campo">
+  <!-- Seção Campo -->
+  <section id="campo" class="parallax reverse">
+    <div class="content right">
       <h2>Vida no Campo</h2>
-      <p>Já a vida no campo é mais tranquila, conectada à natureza e às tradições rurais. É ideal para quem busca qualidade de vida, ar puro e uma rotina mais calma e próxima da família.</p>
+      <p>O campo respira tranquilidade e oferece uma conexão profunda com a natureza. Ideal para quem busca paz, simplicidade e um estilo de vida mais saudável e próximo das origens.</p>
     </div>
+  </section>
 
-    <div class="section" id="diferencas">
-      <h2>Diferenças entre Cidade e Campo</h2>
-      <ul>
-        <li><strong>Ritmo:</strong> Cidade = acelerado | Campo = relaxado</li>
-        <li><strong>Oportunidades:</strong> Cidade = mais empregos | Campo = agricultura e artesanato</li>
-        <li><strong>Natureza:</strong> Cidade = menos verde | Campo = paisagens naturais</li>
-        <li><strong>Infraestrutura:</strong> Cidade = completa | Campo = básica ou limitada</li>
-      </ul>
-      <p>A escolha entre cidade e campo depende muito do estilo de vida que cada pessoa deseja levar.</p>
+  <!-- Seção Diferenças -->
+  <section id="diferencas" class="info-section">
+    <h2>Diferenças entre Cidade e Campo</h2>
+    <div class="comparison">
+      <div class="card">
+        <h3>🌆 Cidade</h3>
+        <ul>
+          <li>Ritmo acelerado</li>
+          <li>Muitas oportunidades</li>
+          <li>Infraestrutura completa</li>
+          <li>Pouca natureza</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>🌾 Campo</h3>
+        <ul>
+          <li>Ritmo calmo</li>
+          <li>Proximidade com a terra</li>
+          <li>Natureza abundante</li>
+          <li>Infraestrutura básica</li>
+        </ul>
+      </div>
     </div>
+  </section>
 
-  </div>
-
+  <!-- Rodapé -->
   <footer>
-    <p>&copy; 2025 Cidade e Campo - Todos os direitos reservados.</p>
+    <p>&copy; 2025 Cidade & Campo | Todos os direitos reservados</p>
   </footer>
 
 </body>
