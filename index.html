@@ -1,211 +1,114 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cidade e Campo - Conheça os Dois Mundos</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f9f9f9;
-      color: #333;
-      line-height: 1.6;
-    }
-
-    header {
-      background: linear-gradient(to right, #0077cc, #2e7d32);
-      color: white;
-      padding: 40px 20px;
-      text-align: center;
-    }
-
-    nav {
-      background-color: #fff;
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      padding: 15px 0;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      position: sticky;
-      top: 0;
-      z-index: 999;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: #333;
-      font-weight: bold;
-      transition: color 0.3s ease;
-    }
-
-    nav a:hover {
-      color: #0077cc;
-    }
-
-    .container {
-      max-width: 1000px;
-      margin: auto;
-      padding: 40px 20px;
-      background-color: white;
-    }
-
-    section {
-      margin-bottom: 60px;
-    }
-
-    h2 {
-      color: #0077cc;
-      border-bottom: 2px solid #ddd;
-      padding-bottom: 10px;
-      margin-bottom: 20px;
-    }
-
-    h3 {
-      color: #2e7d32;
-    }
-
-    img {
-      width: 100%;
-      max-height: 400px;
-      object-fit: cover;
-      border-radius: 8px;
-      margin: 20px 0;
-    }
-
-    ul {
-      padding-left: 20px;
-    }
-
-    footer {
-      background-color: #222;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      margin-top: 40px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campo e Cidade: Contrastes e Harmonia</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 1em 0;
+            text-align: center;
+        }
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 0.5em 0;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            padding: 0.5em 1em;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px 0;
+        }
+        section {
+            background-color: white;
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #4CAF50;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .image-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .image-gallery img {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
+    <header>
+        <h1>Campo e Cidade: Um Olhar Sobre Dois Mundos</h1>
+    </header>
+    <nav>
+        <a href="#campo">O Campo</a>
+        <a href="#cidade">A Cidade</a>
+    </nav>
+    <div class="container">
+        <section id="campo">
+            <h2>A Tranquilidade do Campo</h2>
+            <p>O campo, com sua vasta extensão verde e ar puro, oferece um refúgio da agitação urbana. Aqui, o ritmo de vida é mais lento, ditado pelos ciclos da natureza. As atividades diárias muitas vezes giram em torno da agricultura, pecuária e da preservação ambiental.</p>
+            <p>A vida rural proporciona uma conexão mais profunda com a natureza, a oportunidade de cultivar alimentos frescos e desfrutar de paisagens deslumbrantes. O silêncio é quebrado apenas pelos sons dos pássaros, do vento nas árvores e, ocasionalmente, de algum animal.</p>
+            <div class="image-gallery">
+                <img src="https://via.placeholder.com/300x200?text=Imagem+Campo+1" alt="Paisagem rural com montanhas e árvores">
+                <img src="https://via.placeholder.com/300x200?text=Imagem+Campo+2" alt="Fazenda com animais">
+                <img src="https://via.placeholder.com/300x200?text=Imagem+Campo+3" alt="Pôr do sol no campo">
+            </div>
+        </section>
 
-  <!-- Cabeçalho -->
-  <header>
-    <h1>Cidade e Campo</h1>
-    <p>Descubra as diferenças e semelhanças entre dois dos ambientes mais importantes da vida humana.</p>
-  </header>
-
-  <!-- Navegação -->
-  <nav>
-    <a href="#introducao">📌 Introdução</a>
-    <a href="#cidade">🌆 Cidade</a>
-    <a href="#campo">🌾 Campo</a>
-    <a href="#diferencas">🔍 Diferenças</a>
-    <a href="#impactos">🌍 Impactos</a>
-    <a href="#conclusao">✅ Conclusão</a>
-  </nav>
-
-  <!-- Conteúdo -->
-  <div class="container">
-
-    <!-- Introdução -->
-    <section id="introducao">
-      <h2>📌 Introdução</h2>
-      <p>O mundo moderno é dividido entre áreas urbanas e rurais. A cidade e o campo são realidades que coexistem e se complementam no desenvolvimento humano, econômico e ambiental. Enquanto a cidade é o centro das atividades comerciais e tecnológicas, o campo mantém a base da produção de alimentos e recursos naturais.</p>
-      <img src="https://source.unsplash.com/800x400/?city,farm" alt="Imagem de cidade e campo">
-    </section>
-
-    <!-- Cidade -->
-    <section id="cidade">
-      <h2>🌆 Cidade</h2>
-      <p>As cidades são centros urbanos densamente povoados, onde encontramos alta concentração de pessoas, prédios, indústrias, comércio e serviços. São espaços dinâmicos e diversificados, que reúnem oportunidades profissionais, culturais e sociais.</p>
-      <h3>Vantagens:</h3>
-      <ul>
-        <li>Acesso a serviços de saúde e educação;</li>
-        <li>Mobilidade urbana e transporte público;</li>
-        <li>Empregos e oportunidades de carreira;</li>
-        <li>Infraestrutura completa (água, energia, internet);</li>
-        <li>Opções de lazer, como cinemas, teatros e parques.</li>
-      </ul>
-      <img src="https://source.unsplash.com/800x400/?urban,night" alt="Cidade à noite">
-    </section>
-
-    <!-- Campo -->
-    <section id="campo">
-      <h2>🌾 Campo</h2>
-      <p>O campo é o ambiente rural onde predominam a natureza, o silêncio e a simplicidade. É nele que ocorre a produção de alimentos, a criação de animais e a preservação de ecossistemas. O modo de vida no campo é mais tranquilo e próximo da família.</p>
-      <h3>Vantagens:</h3>
-      <ul>
-        <li>Qualidade de vida e baixo estresse;</li>
-        <li>Ar puro e contato direto com a natureza;</li>
-        <li>Alimentação saudável e orgânica;</li>
-        <li>Menor custo de vida;</li>
-        <li>Paisagens belas e tranquilas.</li>
-      </ul>
-      <img src="https://source.unsplash.com/800x400/?countryside,sunset" alt="Campo ao pôr do sol">
-    </section>
-
-    <!-- Diferenças -->
-    <section id="diferencas">
-      <h2>🔍 Diferenças entre Cidade e Campo</h2>
-      <table border="1" width="100%" cellpadding="10" style="border-collapse: collapse;">
-        <tr style="background-color: #f2f2f2;"> 
-          <th>Aspecto</th>
-          <th>Cidade</th>
-          <th>Campo</th>
-        </tr>
-        <tr>
-          <td>Ritmo de vida</td>
-          <td>Acelerado e corrido</td>
-          <td>Calmo e relaxado</td>
-        </tr>
-        <tr>
-          <td>População</td>
-          <td>Densa e variada</td>
-          <td>Menor e mais homogênea</td>
-        </tr>
-        <tr>
-          <td>Economia</td>
-          <td>Serviços, indústria e comércio</td>
-          <td>Agricultura, pecuária e extrativismo</td>
-        </tr>
-        <tr>
-          <td>Natureza</td>
-          <td>Áreas verdes limitadas</td>
-          <td>Natureza abundante</td>
-        </tr>
-        <tr>
-          <td>Infraestrutura</td>
-          <td>Bem desenvolvida</td>
-          <td>Às vezes precária ou insuficiente</td>
-        </tr>
-      </table>
-    </section>
-
-    <!-- Impactos -->
-    <section id="impactos">
-      <h2>🌍 Impactos Ambientais e Sociais</h2>
-      <p>Tanto a cidade quanto o campo têm impactos positivos e negativos no meio ambiente e na sociedade:</p>
-      <ul>
-        <li><strong>Cidade:</strong> poluição do ar e sonora, desmatamento, lixo, mas também inovação e tecnologia verde.</li>
-        <li><strong>Campo:</strong> pode sofrer com uso inadequado do solo, agrotóxicos e desmatamento, mas também é essencial para a sustentabilidade e conservação.</li>
-      </ul>
-      <p>É fundamental promover o equilíbrio entre desenvolvimento e preservação ambiental nas duas áreas.</p>
-      <img src="https://source.unsplash.com/800x400/?nature,pollution" alt="Impactos ambientais">
-    </section>
-
-    <!-- Conclusão -->
-    <section id="conclusao">
-      <h2>✅ Conclusão</h2>
-      <p>A escolha entre viver na cidade ou no campo depende muito do estilo de vida e das prioridades de cada pessoa. Ambos os ambientes são fundamentais para o equilíbrio social, econômico e ambiental do planeta. Preservar e valorizar os dois é garantir um futuro mais justo e sustentável para todos.</p>
-    </section>
-
-  </div>
-
-  <!-- Rodapé -->
-  <footer>
-    <p>&copy; 2025 Cidade e Campo | Todos os direitos reservados</p>
-  </footer>
-
+        <section id="cidade">
+            <h2>A Dinâmica da Cidade</h2>
+            <p>Em contraste, a cidade é um centro de intensa atividade, com arranha-céus, ruas movimentadas e uma infinidade de oportunidades. A vida urbana é caracterizada pela sua diversidade cultural, acesso a serviços, entretenimento e uma vasta gama de profissões.</p>
+            <p>As cidades são polos de inovação e desenvolvimento, oferecendo uma vida social vibrante, com teatros, museus, restaurantes e uma rede de transporte complexa. Apesar do ritmo acelerado, a cidade proporciona conveniência e acesso a quase tudo que se possa desejar.</p>
+            <div class="image-gallery">
+                <img src="https://via.placeholder.com/300x200?text=Imagem+Cidade+1" alt="Arranha-céus em uma grande cidade">
+                <img src="https://via.placeholder.com/300x200?text=Imagem+Cidade+2" alt="Rua movimentada da cidade à noite">
+                <img src="https://via.placeholder.com/300x200?text=Imagem+Cidade+3" alt="Parque urbano com pessoas">
+            </div>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2025 Campo e Cidade. Todos os direitos reservados.</p>
+    </footer>
 </body>
 </html>
